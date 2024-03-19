@@ -186,7 +186,9 @@ class PrivateKey(object):
 class MixinHandler(object):
 
     custom_headers = {
-        'Server': 'TornadoServer'
+        'Server': 'TornadoServer',
+        'Cross-Origin-Resource-Policy': 'cross-origin',
+        'Cross-Origin-Embedder-Policy': 'require-corp'
     }
 
     html = ('<html><head><title>{code} {reason}</title></head><body>{code} '
