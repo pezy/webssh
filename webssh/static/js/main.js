@@ -796,32 +796,6 @@ jQuery(function($){
   });
 
 
-  function cross_origin_connect(event)
-  {
-    console.log(event.origin);
-    var prop = 'connect',
-        args;
-
-    try {
-      args = JSON.parse(event.data);
-    } catch (SyntaxError) {
-      args = event.data.split('|');
-    }
-
-    if (!Array.isArray(args)) {
-      args = [args];
-    }
-
-    try {
-      event_origin = event.origin;
-      wssh[prop].apply(wssh, args);
-    } finally {
-      event_origin = undefined;
-    }
-  }
-
-  window.addEventListener('message', cross_origin_connect, false);
-
   if (document.fonts) {
     document.fonts.ready.then(
       function () {

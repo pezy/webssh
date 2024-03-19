@@ -35,7 +35,7 @@ define('redirect', type=bool, default=True, help='Redirecting http to https')
 define('fbidhttp', type=bool, default=True,
        help='Forbid public plain http incoming requests')
 define('xheaders', type=bool, default=True, help='Support xheaders')
-define('xsrf', type=bool, default=True, help='CSRF protection')
+define('xsrf', type=bool, default=False, help='CSRF protection')
 define('origin', default='same', help='''Origin policy,
 'same': same origin policy, matches host name and port number;
 'primary': primary domain policy, matches primary domain only;
